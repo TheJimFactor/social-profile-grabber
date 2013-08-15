@@ -10,7 +10,12 @@ doc = parse(url).getroot()
 patterns = {
 	'Facebook':r'https://www.facebook.com/([a-zA-Z]+)"',
 	'Twitter':r'https://twitter.com/([a-zA-Z]+)"',
-	'Google Plus':r'https://plus.google.com/%s([a-zA-Z]+)/"' % re.escape('+')
+	'Google Plus':r'https://plus.google.com/%s([a-zA-Z]+)/"' % re.escape('+'),
+	'Flickr':r'https://www.flickr.com/photos/([a-zA-Z]+)',
+	'Pinterest':r'http://pinterest.com/([a-zA-Z]+)',
+	'Tumblr':r'http://([a-zA-Z]+).tumblr.com',
+	'LinkedIn':r'https://www.linkedin.com/company/([a-zA-Z-]+)',
+	'Feed Burner':r'http://feeds2.feedburner.com/([a-zA-Z]+)',
 	}
 
 # matchestest = re.search(patterns['Google Plus'], tostring(doc))
