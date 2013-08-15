@@ -10,7 +10,7 @@ doc = parse(url).getroot()
 patterns = {
 	'Facebook':r'https://www.facebook.com/([a-zA-Z]+)"',
 	'Twitter':r'https://twitter.com/([a-zA-Z]+)"',
-	'Google Plus':r'https://plus.google.com/\+([a-zA-Z])+/"'
+	'Google Plus':r'https://plus.google.com/%s([a-zA-Z]+)/"' % re.escape('+')
 	}
 
 # matchestest = re.search(patterns['Google Plus'], tostring(doc))
